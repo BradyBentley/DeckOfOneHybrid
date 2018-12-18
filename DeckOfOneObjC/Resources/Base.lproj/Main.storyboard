@@ -10,42 +10,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Card View Controller-->
         <scene sceneID="PXh-GL-pta">
             <objects>
-                <viewController id="B8p-zu-VdC" sceneMemberID="viewController">
+                <viewController id="B8p-zu-VdC" customClass="CardViewController" customModule="DeckOfOneObjC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SH0-2A-zzE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yGB-Dq-LsX">
-                                <rect key="frame" x="41.5" y="139.5" width="331" height="627"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="29U-2u-M2s">
-                                        <rect key="frame" x="45.5" y="0.0" width="240" height="128"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtP-EI-CZR">
-                                        <rect key="frame" x="142.5" y="138" width="46" height="458.5"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhY-zi-Cz6">
-                                        <rect key="frame" x="144.5" y="606.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="29U-2u-M2s">
+                                <rect key="frame" x="92" y="153.5" width="230" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="LgN-Wv-jdx"/>
+                                    <constraint firstAttribute="width" constant="230" id="hfh-67-gUC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtP-EI-CZR">
+                                <rect key="frame" x="164.5" y="493.5" width="85" height="30"/>
+                                <state key="normal" title="Draw a Card"/>
+                                <connections>
+                                    <action selector="cardButtonTapped:" destination="B8p-zu-VdC" eventType="touchUpInside" id="Avf-Za-3BJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yGB-Dq-LsX" firstAttribute="centerX" secondItem="nhd-AE-EJM" secondAttribute="centerX" id="DLJ-B5-BZj"/>
-                            <constraint firstItem="yGB-Dq-LsX" firstAttribute="width" secondItem="SH0-2A-zzE" secondAttribute="width" multiplier="0.8" id="Yvl-6y-mbc"/>
-                            <constraint firstItem="yGB-Dq-LsX" firstAttribute="centerY" secondItem="nhd-AE-EJM" secondAttribute="centerY" id="rKs-3O-GiP"/>
-                            <constraint firstItem="yGB-Dq-LsX" firstAttribute="height" secondItem="SH0-2A-zzE" secondAttribute="height" multiplier="0.7" id="rxx-dt-rMD"/>
+                            <constraint firstItem="29U-2u-M2s" firstAttribute="centerY" secondItem="SH0-2A-zzE" secondAttribute="centerY" multiplier="0.7" id="ALi-vh-ffw"/>
+                            <constraint firstItem="29U-2u-M2s" firstAttribute="centerX" secondItem="SH0-2A-zzE" secondAttribute="centerX" id="LiH-er-JeZ"/>
+                            <constraint firstItem="qtP-EI-CZR" firstAttribute="top" secondItem="29U-2u-M2s" secondAttribute="bottom" constant="20" id="Mrn-Yv-loV"/>
+                            <constraint firstItem="qtP-EI-CZR" firstAttribute="centerX" secondItem="SH0-2A-zzE" secondAttribute="centerX" id="VRr-r5-uZi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nhd-AE-EJM"/>
                     </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="29U-2u-M2s" id="MNm-JC-rTd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SEg-h7-h26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

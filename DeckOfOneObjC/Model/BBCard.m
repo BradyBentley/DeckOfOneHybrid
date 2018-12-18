@@ -10,4 +10,17 @@
 
 @implementation BBCard
 
+// MARK: - Initialization
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    self = [super init];
+    if (self) {
+        NSArray *cards = dictionary[@"cards"];
+        NSDictionary *cardDictionary = [cards firstObject];
+        NSString *imageUrlAsString = cardDictionary[@"images"];
+        _imageUrlAsString = imageUrlAsString;
+    }
+    return self;
+}
+
 @end

@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BBCard : NSObject
 
+// MARK: - Properties
+@property (nonatomic, readonly) NSString *imageUrlAsString;
+
+// MARK: - Initialization
+- (instancetype)initWithDictionary: (NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

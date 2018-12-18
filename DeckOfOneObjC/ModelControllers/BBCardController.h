@@ -7,10 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BBCard.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BBCardController : NSObject
+
+// MARK: - Methods
++ (void) fetchCardWithCompletion: (void (^) (BBCard * _Nullable))completion;
+
++ (void) fetchCardImageWith: (BBCard * _Nullable)card
+                 completion: (void (^) (UIImage *))completion;
+
 
 @end
 
