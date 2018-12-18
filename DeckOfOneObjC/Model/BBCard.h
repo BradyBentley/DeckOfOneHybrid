@@ -1,15 +1,17 @@
 //
-//  ViewController.h
+//  BBCard.h
 //  DeckOfOneObjC
 //
 //  Created by Brady Bentley on 12/18/18.
 //  Copyright © 2018 Brady. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface BBCard : NSObject
 
 @end
 
+NS_ASSUME_NONNULL_END
