@@ -17,7 +17,7 @@
     if (self) {
         NSArray *cards = dictionary[@"cards"];
         NSDictionary *cardDictionary = [cards firstObject];
-        NSString *imageUrlAsString = cardDictionary[@"images"];
+        NSString *imageUrlAsString = cardDictionary[@"image"];
         _imageUrlAsString = imageUrlAsString;
     }
     return self;

@@ -22,12 +22,12 @@
     //DataTask + Resume
     [[[NSURLSession sharedSession] dataTaskWithURL:baseUrl completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
-            NSLog(@"There was an error in %s: %@", __PRETTY_FUNCTION__, error.localizedDescription);
+            NSLog(@"❌There was an error in %s: %@", __PRETTY_FUNCTION__, error.localizedDescription);
             completion(nil);
             return;
         }
         if (data == nil) {
-            NSLog(@"There was an error getting the card");
+            NSLog(@"❌There was an error getting the card");
             completion(nil);
             return;
         }
@@ -50,12 +50,12 @@
     //DataTask + Resume
     [[[NSURLSession sharedSession] dataTaskWithURL:imageUrl completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
-            NSLog(@"There was an error in %s: %@", __PRETTY_FUNCTION__, error.localizedDescription);
+            NSLog(@"❌There was an error in %s: %@", __PRETTY_FUNCTION__, error.localizedDescription);
             completion(nil);
             return;
         }
         if (data == nil) {
-            NSLog(@"There was an error getting the image");
+            NSLog(@"❌There was an error getting the image");
             completion(nil);
             return;
         }
